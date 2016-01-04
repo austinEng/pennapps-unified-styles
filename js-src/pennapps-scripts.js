@@ -1,0 +1,1 @@
+window.registerNav = require('./navbar').registerNav;
