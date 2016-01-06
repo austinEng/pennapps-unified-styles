@@ -961,6 +961,10 @@ h2:after {
 }
 .pennapps-nav ul.nav-links {
   position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
 }
