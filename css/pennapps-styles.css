@@ -893,6 +893,7 @@ h1:not(.nav-brand) {
   line-height: 1em;
   margin: 0 -999rem;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -926,11 +927,17 @@ h2:after {
   width: 100%;
 }
 .splash h1, .splash h2, .splash h3, .splash h3, .splash h4, .splash h5, .splash h6 {
+  max-width: 100%;
   color: white;
 }
 
 .pennapps-nav {
   background-color: white;
+  border-bottom: 1px solid white;
+  -moz-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
 }
 .pennapps-nav.fixed {
   position: fixed;
@@ -955,7 +962,7 @@ h2:after {
 .pennapps-nav ul.nav-links {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .pennapps-nav ul.nav-links > li {
   flex: 0 1 auto;
@@ -1002,7 +1009,14 @@ h2:after {
   position: relative;
   margin: auto;
   background-color: white;
+  -moz-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
   top: -15px;
+}
+.pennapps-nav ul.nav-links > li > a.active .bubble:after {
+  background-color: #3390f1;
 }
 .pennapps-nav ul.nav-links .nav-slider {
   height: 2px;

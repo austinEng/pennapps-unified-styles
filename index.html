@@ -1,104 +1,145 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/pennapps-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+  <link rel="stylesheet" type="text/css" href="css/pennapps-styles.css">
 </head>
 
 <body>
 
-	<div class="splash">
-		<div class="center-block">
-			<h1>PennApps Unified Styles</h1>
-		</div>
-	</div>
+  <div class="splash">
+    <div class="center-block">
+      <h1>PennApps Unified Styles</h1>
+    </div>
+  </div>
 
-	<nav id="navbar" class="pennapps-nav">
-		<div class="container">
-			<div class="nav-header">
-				<a href="#top">
-					<h1 class="nav-brand">
-						PennApps <span style="font-family: HalisR-Light">XIII</span> Unified Styles
-					</h1>
-				</a>
-			</div>
-			<div class="nav-collapse">
-				<ul class="nav-links">
-					<li><a class="nav-slider"></a></li>
-					<li><a href="#"><div class="bubble"></div>The Grid</a></li>
-					<li><a href="#"><div class="bubble"></div>Link</a></li>
-					<li><a href="#"><div class="bubble"></div>Link</a></li>
-					<li><a href="#"><div class="bubble"></div>Link</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+  <nav id="navbar" class="pennapps-nav">
+    <div class="container">
+      <div class="nav-header">
+        <a href="#top">
+          <h1 class="nav-brand">
+            Unified Styles <span style="font-family: HalisR-Light">XIII</span>
+          </h1>
+        </a>
+      </div>
+      <div class="nav-collapse">
+        <ul class="nav-links">
+          <li><a id="nav-slider" class="nav-slider"></a></li>
+          <li><a href="#grid-section"><div class="bubble"></div>The Grid</a></li>
+          <li><a href="#nav-section"><div class="bubble"></div>The Nav</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-	<div class="container">
-		<section>
-			<h2>Standard Unified Styles</h2>
-			<p>In order to maintain uniform styles across all PennApps sites, use this site as a template and the provided <a href="#">styles</a> as a base stylesheet. Custom styles can then be applied for page-specific design and styles. The necessary javascript is also provided.</p>
+  <div class="container">
+    <section>
+      <h2>Standard Unified Styles</h2>
+      <p>In order to maintain uniform styles across all PennApps sites, use this site as a template and the provided styles as a base stylesheet. Custom styles can then be applied for page-specific design and styles. The necessary javascript is also provided.</p>
 
-			<ul>
-				<li><a href="css/pennapps-styles.css">Unified Styles</a></li>
-				<li><a href="css/pennapps-styles.min.css">Unified Styles (Minified)</a></li>
-				<li><a href="js/pennapps-scripts.js">Unified Javascript</a></li>
-				<li><a href="js/pennapps-scripts.min.js">Unified Javascript (Minified)</a></li>
-			</ul>
+      <ul>
+        <li><a href="css/pennapps-styles.css">Unified Styles</a></li>
+        <li><a href="css/pennapps-styles.min.css">Unified Styles (Minified)</a></li>
+        <li><a href="js/pennapps-scripts.js">Unified Javascript</a></li>
+        <li><a href="js/pennapps-scripts.min.js">Unified Javascript (Minified)</a></li>
+      </ul>
 
-			<p>Note: It would be a good idea to link to these files so that all websites share the same base styles and will all automatically update when this site is updated.</p>
-		</section>
+      <p>Note: It would be a good idea to link to these files so that all websites share the same base styles and will all automatically update when this site is updated.</p>
+    </section>
 
-		<section>
-			<h1>The Grid</h1>
-			<h2>Columns Like Bootstrap</h2>
-			<p>If you're familiar with the grid system in Bootstrap, the same basic grid applies here. See <a href="http://getbootstrap.com/css/#grid">here</a> for more information.</p>
+    <section id="grid-section">
+      <h1>The Grid</h1>
+      <h2>Columns Like Bootstrap</h2>
+      <p>If you're familiar with the grid system in Bootstrap, the same basic grid applies here. See <a href="http://getbootstrap.com/css/#grid">here</a> for more information.</p>
 
-			<div class="show-grid">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-						<div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
-						<div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">.col-sm-4</div>
-						<div class="col-sm-4">.col-sm-4</div>
-						<div class="col-sm-4">.col-sm-4</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">.col-md-6</div>
-						<div class="col-md-6">.col-md-6</div>
-					</div>
-				</div>
-			</div>
+      <div class="show-grid">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+            <div class="col-sm-1 col-xs-2">.col-sm-1 .col-xs-2</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
+            <div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
+            <div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
+            <div class="col-lg-3 col-md-6 col-sm-12">.col-lg-3 .col-md-6 .col-sm-12</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-6">.col-md-6</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<p>This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text.</p>
-			<p>This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text.</p>
-			<p>This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text. This is a bunch of temporary text.</p>
-		</section>
-	</div>
+    <section id="nav-section">
+      <h1>The Nav</h1>
+      <h2>Base Code</h2>
+      <p>Below is the code for this page's navigation bar.</p>
+      <pre>
+        <code class="html">
+&lt;nav id=&quot;navbar&quot; class=&quot;pennapps-nav&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;nav-header&quot;&gt;
+      &lt;a href=&quot;#top&quot;&gt;
+        &lt;h1 class=&quot;nav-brand&quot;&gt;
+          Unified Styles &lt;span style=&quot;font-family: HalisR-Light&quot;&gt;XIII&lt;/span&gt;
+        &lt;/h1&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;nav-collapse&quot;&gt;
+      &lt;ul class=&quot;nav-links&quot;&gt;
+        &lt;li&gt;&lt;a id=&quot;nav-slider&quot; class=&quot;nav-slider&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#grid-section&quot;&gt;&lt;div class=&quot;bubble&quot;&gt;&lt;/div&gt;The Grid&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#nav-section&quot;&gt;&lt;div class=&quot;bubble&quot;&gt;&lt;/div&gt;The Nav&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+        </code>
+      </pre>
 
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="js/pennapps-scripts.js"></script>
-	<script>
-		registerNav($('#navbar'), function () {
-			return $(window).scrollTop() + $('#navbar').height() > $(window).height();
-		});
-	</script>
+      <p>Follow this template when adding a nav bar to a page. Note that the nav slider must be the first element the nav-links list. Each navigation link must link to an anchor which is the id of the repsective section on the page. Not doing so will cause the nav slider to function improperly.</p>
+
+      <h2>Initialization</h2>
+      <p>Initialize the nav bar by calling <code>nav.initializeNav($('#navbar'), -70);</code> in a script tag just before the closing body tag. Here, <code>#navbar</code> is the id of the navbar you are initializing and <code>-70</code> is the target offset (Due to padding and margin, the position of the anchor elements on the page is slightly different from the position of the upper edge of those elements. This is that offset in pixels).</p>
+
+      <h2>Dynamic Pinning</h2>
+      <p>The navbar has two modes. By default, it is relatively positioned and located on the page where you would expect it. Adding the class "fixed" to the nav element causes the nav bar to pin to the top of the screen. On this site, the navbar is first relatively positioned below the splash and then pins to the top when scrolling down. To accomplish this effect, you need to call:</p>
+      <pre><code>
+      nav.registerNav($('#navbar'), function () {
+        return $(window).scrollTop() + $('#navbar').height() &gt; $(window).height();
+      });
+      </code></pre>
+      <p>The function parameter is a function that returns <code>true</code> when you want the nav to be pinned, and <code>false</code> otherwise; In this example, the navbar pins when the user has scrolled down farther than the window is tall;</p>
+
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="js/pennapps-scripts.js"></script>
+  <script>
+    nav.registerNav($('#navbar'), function () {
+      return $(window).scrollTop() + $('#navbar').height() > $(window).height();
+    });
+    nav.initializeNav($('#navbar'), -70);
+  </script>
 </body>
 </html>
