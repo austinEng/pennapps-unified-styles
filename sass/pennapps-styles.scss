@@ -21,9 +21,11 @@ p {
     font-weight: 300;
     font-size: 1.1em;
     line-height: 1.6em;
-    margin: 0 0 10px;
+    margin: 0px;
+    //margin: 0 0 10px;
 
     & + p {
+        margin-top: 10px;
     	text-indent: 30px;
     }
 }
@@ -32,3 +34,4 @@ p {
 @import 'splash';
 @import 'navbar';
 @import 'center';
+@import 'footer';

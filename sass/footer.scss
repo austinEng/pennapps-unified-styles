@@ -1,0 +1,31 @@
+@import 'variables';
+
+footer {
+	@extend .container;
+
+	background-color: $primary-color;
+	margin-top: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+
+	&:after {
+		content: "";
+		background-color: $primary-color;
+		position: absolute;
+		display: block;
+		left: -999rem;
+		right: -999rem;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	p {
+		color: white;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+	}
+}

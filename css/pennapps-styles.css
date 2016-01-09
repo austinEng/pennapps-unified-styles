@@ -280,24 +280,24 @@ a, a:visited, a:hover, a:active {
   box-sizing: border-box;
 }
 
-.container {
+.container, footer {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 768px) {
-  .container {
+  .container, footer {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container, footer {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container, footer {
     width: 1170px;
   }
 }
@@ -859,9 +859,10 @@ p {
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.6em;
-  margin: 0 0 10px;
+  margin: 0px;
 }
 p + p {
+  margin-top: 10px;
   text-indent: 30px;
 }
 
@@ -1040,6 +1041,31 @@ h2:after {
   text-align: center;
   width: 100%;
   height: 100%;
+}
+
+footer {
+  background-color: #3390f1;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+footer:after {
+  content: "";
+  background-color: #3390f1;
+  position: absolute;
+  display: block;
+  left: -999rem;
+  right: -999rem;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+footer p {
+  color: white;
+}
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  color: white;
 }
 
 /*# sourceMappingURL=pennapps-styles.css.map */
