@@ -61,6 +61,10 @@ module.exports = {
 			var percent = (1 - percentBetween) * prevPercent + (percentBetween) * nextPercent;
 			$('#nav-slider').css('width', percent*100 + "%");
 		};
+		navLinks.click(function (e) {
+			$("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top + topOffset + 2 }, 300);
+			e.preventDefault();
+		});
 		$(window).resize(function () {
 			handleNavSlider();
 		});
