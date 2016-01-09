@@ -2,6 +2,8 @@
 
 .pennapps-nav {
 	background-color: white;
+	border-bottom: 1px solid white;
+	@include transition(border 0.3s ease);
 
 	&.fixed {
 		position: fixed;
@@ -35,8 +37,12 @@
 		@extend ul.inline;
 
 		position: relative;
-		display: flex;
-		justify-content: space-around;
+		display: -webkit-box;
+		display: -moz-box;   
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex; 
+		justify-content: space-between;
 
 		&> li {
 			flex: 0 1 auto;
@@ -83,8 +89,17 @@
 	    				position: relative;
 	    				margin: auto;
 	    				background-color: white;
+	    				@include transition(background 0.3s ease);
 	    				top: -15px;
 	    			}
+    			}
+
+    			&.active {
+    				.bubble {
+    					&:after {
+    						background-color: $primary-color;
+    					}
+    				}
     			}
 			}
 		}

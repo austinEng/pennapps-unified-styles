@@ -1,1 +1,1 @@
-window.registerNav = require('./navbar').registerNav;
+window.nav = require('./navbar');
