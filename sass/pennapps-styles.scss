@@ -22,11 +22,18 @@ p {
     font-size: 1.1em;
     line-height: 1.6em;
     margin: 0px;
-    //margin: 0 0 10px;
 
     & + p {
         margin-top: 10px;
-    	text-indent: 30px;
+    }
+}
+
+ul {
+    li {
+        color: #5f5f5f;
+        font-family: "Open Sans",sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6em;
     }
 }
 
