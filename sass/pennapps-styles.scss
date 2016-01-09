@@ -30,6 +30,12 @@ p {
     }
 }
 
+pre code {
+    background-color: #efefef;
+    display: block;
+    padding: 5px;
+}
+
 @import 'titles';
 @import 'splash';
 @import 'navbar';

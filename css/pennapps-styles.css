@@ -866,6 +866,12 @@ p + p {
   text-indent: 30px;
 }
 
+pre code {
+  background-color: #efefef;
+  display: block;
+  padding: 5px;
+}
+
 html, body {
   overflow-x: hidden;
 }
@@ -914,6 +920,22 @@ h2:after {
   top: 5px;
   background-color: #062946;
   content: " ";
+}
+
+h3 {
+  color: #3390f1;
+  font-size: 24px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  font-family: HalisR-Black;
+}
+
+h4 {
+  color: #062946;
+  font-family: HalisR-Regular;
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .splash {
