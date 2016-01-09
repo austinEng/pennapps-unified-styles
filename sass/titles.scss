@@ -51,3 +51,19 @@ h2 {
 		content: " ";
 	}
 }
+
+h3 {
+	color: $primary-color;
+	font-size: 24px;
+	margin-top: 24px;
+	margin-bottom: 10px;
+	font-family: HalisR-Black;
+}
+
+h4 {
+	color: $secondary-color;
+	font-family: HalisR-Regular;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
