@@ -16,6 +16,11 @@
   <nav id="navbar" class="pennapps-nav">
     <div class="container">
       <div class="nav-header">
+        <a href="#" class="nav-expand">
+            <span class="expand-bar"></span>
+            <span class="expand-bar"></span>
+            <span class="expand-bar"></span>
+        </a>
         <a href="#top">
           <h1 class="nav-brand">
             Unified Styles <span style="font-family: HalisR-Light">XIII</span>
@@ -148,7 +153,10 @@
     nav.registerNav($('#navbar'), function () {
       return $(window).scrollTop() + $('#navbar').height() > $(window).height();
     });
-    nav.initializeNav($('#navbar'), -70);
+    nav.initializeNav($('#navbar'), 0);
+    nav.registerCollapse($('#navbar'), function () {
+      return $(window).width() <= 590;
+    });
   </script>
 </body>
 </html>
