@@ -24,9 +24,13 @@ module.exports = {
 		for (var i=0; i < numLinks; i++) {
 			navTargets.push($(navLinks[i]).attr('href'));
 		}
-		var topOffset = headingOffset;
+
+		var getOffset = function () {
+			return -navbar.height() + headingOffset;
+		}
 
 		var handleNavSlider = function () {
+			var topOffset = getOffset();
 			var section=0;
 			var scrollPos = $(window).scrollTop();
 
@@ -61,7 +65,7 @@ module.exports = {
 			$('#nav-slider').css('width', percent*100 + "%");
 		};
 		navLinks.click(function (e) {
-			$("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top + topOffset + 2 }, 300);
+			$("html, body").animate({ scrollTop: $($(e.target).attr('href')).offset().top + getOffset() + 2 }, 300);
 			e.preventDefault();
 		});
 		$(window).resize(function () {
@@ -70,5 +74,39 @@ module.exports = {
 		$(window).scroll(function () {
 			handleNavSlider();
 		});	
+	},
+
+	registerCollapse: function (navbar, collapseFunc) {
+		var handleNav = function () {
+			if (collapseFunc()) {
+				navbar.addClass('collapse');
+			} else {
+				navbar.removeClass('collapse').removeClass('collapse-in');
+			}
+		};
+		$(window).resize(function () {
+			handleNav();
+		});	
+		$(window).load(function() {
+			handleNav();
+		})
+	},
+
+	initializeCollapse: function () {
+		$('.nav-expand').click(function (e) {
+			e.preventDefault();
+			var navbar = $(this).closest('.pennapps-nav');
+			var drawer = navbar.find('.nav-collapse');
+
+			if (navbar.hasClass('collapse-in')) {
+				drawer.slideUp(300, function () {
+					navbar.removeClass('collapse-in');
+				});
+			} else {
+				drawer.slideDown(300, function () {
+					navbar.addClass('collapse-in');
+				});
+			}
+		});
 	}
 }
