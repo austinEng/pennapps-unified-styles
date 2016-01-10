@@ -90,21 +90,23 @@ module.exports = {
 		$(window).load(function() {
 			handleNav();
 		})
+	},
+
+	initializeCollapse: function () {
+		$('.nav-expand').click(function (e) {
+			e.preventDefault();
+			var navbar = $(this).closest('.pennapps-nav');
+			var drawer = navbar.find('.nav-collapse');
+
+			if (navbar.hasClass('collapse-in')) {
+				drawer.slideUp(300, function () {
+					navbar.removeClass('collapse-in');
+				});
+			} else {
+				drawer.slideDown(300, function () {
+					navbar.addClass('collapse-in');
+				});
+			}
+		});
 	}
 }
-
-$('.nav-expand').click(function (e) {
-	e.preventDefault();
-	var navbar = $(this).closest('.pennapps-nav');
-	var drawer = navbar.find('.nav-collapse');
-
-	if (navbar.hasClass('collapse-in')) {
-		drawer.slideUp(300, function () {
-			navbar.removeClass('collapse-in');
-		});
-	} else {
-		drawer.slideDown(300, function () {
-			navbar.addClass('collapse-in');
-		});
-	}
-});
