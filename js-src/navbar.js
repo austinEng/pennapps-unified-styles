@@ -81,6 +81,7 @@ module.exports = {
 			if (collapseFunc()) {
 				navbar.addClass('collapse');
 			} else {
+				navbar.find('.nav-collapse').show();
 				navbar.removeClass('collapse').removeClass('collapse-in');
 			}
 		};
