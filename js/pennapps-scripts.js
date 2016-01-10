@@ -27,7 +27,7 @@ module.exports = {
 		}
 
 		var getOffset = function () {
-			return -navbar.height() + headingOffset;
+			return -navbar.find('.nav-header').height() + headingOffset;
 		}
 
 		var handleNavSlider = function () {
@@ -106,6 +106,11 @@ module.exports = {
 			} else {
 				drawer.slideDown(300, function () {
 					navbar.addClass('collapse-in');
+					$('.nav-links a').click(function (e) {
+						drawer.slideUp(300, function () {
+							navbar.removeClass('collapse-in');
+						});
+					});
 				});
 			}
 		});
