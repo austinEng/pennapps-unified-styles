@@ -3,6 +3,8 @@
 .pennapps-nav {
 	background-color: white;
 	border-bottom: 1px solid white;
+	box-shadow: 0px 0px 0px black;
+	@include transition(boxShadow 0.3s ease);
 	@include transition(border 0.3s ease);
 
 	&.fixed {
@@ -12,6 +14,7 @@
 		bottom: auto;
 		z-index: 1;
 		border-bottom: 1px solid $primary-color;
+	    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 
 		ul.nav-links {
 			&> li {
@@ -26,10 +29,29 @@
 		float: left;
 	}
 
+	.nav-expand {
+		display: none;
+		float: right;
+		padding: 9px 10px;
+		//border: 1px solid $primary-color;
+		border-radius: 4px;
+
+		.expand-bar {
+			display: block;
+			background-color: $primary-color;
+			height: 2px;
+			width: 22px;
+
+			& + .expand-bar {
+				margin-top: 4px;
+			}
+		}
+	}
+
 	.nav-brand {
 		float: left;
 		font-family: HalisR-Black;
-	    margin-top: 10px;
+	    margin: 10px 0;
 	    font-size: 30px;
 	}
 
@@ -113,6 +135,62 @@
 		    top: -2px;
 		    padding: 0px;
 		    margin-left: 15px;
+		}
+	}
+
+	&.collapse {
+
+		.nav-header {
+			float: none;
+
+			.nav-expand {
+				margin-top: 10px;
+				display: block;
+			}
+
+			&:after {
+				clear: both;
+		    	display: block;
+		    	content: '';
+			}
+		}
+
+		.nav-collapse {
+			@extend .row;
+			display: none;
+			overflow: hidden;
+		}
+
+		ul.nav-links {
+			display: block;
+
+			&> li {
+				display: block;
+
+				&> a {
+					
+					margin-top: 0px;
+
+					&:hover {
+						background-color: $primary-color;
+						color: white;
+					}
+
+					.bubble {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.nav-slider {
+			display: none;
+		}
+
+		&.collapse-in {
+			.nav-collapse {
+				height: auto;
+			}
 		}
 	}
 }
