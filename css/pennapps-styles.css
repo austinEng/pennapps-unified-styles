@@ -1133,6 +1133,24 @@ h4 {
   height: 100%;
 }
 
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+table tr {
+  background-color: #f8f8f8;
+}
+table tr:nth-child(odd) {
+  background-color: white;
+}
+table tr th {
+  background-color: #3390f1;
+  color: white;
+}
+table tr th, table tr td {
+  padding: 10px 20px;
+}
+
 footer {
   background-color: #3390f1;
   margin-top: 30px;
