@@ -994,6 +994,9 @@ h4 {
   padding: 9px 10px;
   border-radius: 4px;
 }
+.pennapps-nav .nav-expand:hover {
+  cursor: pointer;
+}
 .pennapps-nav .nav-expand .expand-bar {
   display: block;
   background-color: #3390f1;
