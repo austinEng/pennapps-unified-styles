@@ -1177,7 +1177,14 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 }
 footer a, footer a:active, footer a:hover, footer a:visited {
   color: white;
+}
+footer a:hover {
   text-decoration: underline;
+}
+footer .footer-col {
+  padding: 0px 0px 0px 20px;
+  margin: 20px 0px 0px 20px;
+  border-left: 2px solid white;
 }
 
 /*# sourceMappingURL=pennapps-styles.css.map */
