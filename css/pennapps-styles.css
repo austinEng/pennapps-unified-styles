@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("http://hello.myfonts.net/count/2ddd1b.css");
-@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
+@import url("//hello.myfonts.net/count/2ddd1b.css");
+@import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
