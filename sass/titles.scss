@@ -10,30 +10,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	color: #3390f1;
-    font-family: HalisR-Regular;
-    font-size: 3.5em;
-    text-transform: uppercase;
+	color: $primary-color;
+  font-family: HalisR-Regular;
+  font-size: 3.5em;
+  text-transform: uppercase;
 }
 
 h1:not(.nav-brand) {
 	font-family: HalisR-Black;
-	padding: 40px 0 35px 0;
-	color: #fff;
-	text-align: center;
-    font-size: 3.5em;
+	// padding: 40px 0 35px 0;
+	// color: #fff;
+  color: $primary-color;
+	// text-align: center;
+  font-size: 3em;
 	text-transform: uppercase;
-	background-color: $primary-color;
+	// background-color: $primary-color;
 	font-weight: 500;
 	line-height: 1em;
 
-    margin: 0 -999rem;
+    // margin: 0 -999rem;
     margin-top: 50px;
     margin-bottom: 20px;
+
+  &:after {
+    display: block;
+    position: relative;
+    height: 3px;
+    top: 5px;
+    background-color: $primary-color;
+    content: " ";
+  }
 }
 
 h2 {
-    color: $secondary-color;
+  color: $secondary-color;
+  font-family: HalisR-Regular;
+  font-size: 1.5em;
+  // color: $secondary-color;
 	font-family: HalisR-Regular;
 	font-size: 2em;
 	padding-top: 10px;
@@ -41,15 +54,17 @@ h2 {
 	margin-bottom: 20px;
 	font-weight: 500;
 	line-height: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
 
-	&:after {
-		display: block;
-		position: relative;
-		height: 3px;
-		top: 5px;
-		background-color: $secondary-color;
-		content: " ";
-	}
+	// &:after {
+	// 	display: block;
+	// 	position: relative;
+	// 	height: 3px;
+	// 	top: 5px;
+	// 	background-color: $secondary-color;
+	// 	content: " ";
+	// }
 }
 
 h3 {

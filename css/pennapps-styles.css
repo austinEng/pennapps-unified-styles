@@ -230,7 +230,7 @@ ul.inline li, .pennapps-nav ul.nav-links li {
 }
 
 a, a:visited, a:hover, a:active {
-  color: #3390f1;
+  color: #062946;
   text-decoration: none;
 }
 
@@ -853,29 +853,62 @@ a, a:visited, a:hover, a:active {
   border: 1px solid rgba(86, 61, 124, 0.2);
 }
 
-p {
-  color: #5f5f5f;
+p, li {
+  color: #777;
   font-family: "Open Sans",sans-serif;
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.6em;
-  margin: 0px;
-}
-p + p {
-  margin-top: 10px;
 }
 
-ul li {
-  color: #5f5f5f;
-  font-family: "Open Sans",sans-serif;
-  font-size: 1.1em;
-  line-height: 1.6em;
+p + p {
+  margin-top: 10px;
 }
 
 pre code {
   background-color: #efefef;
   display: block;
-  padding: 5px;
+  padding: 10px;
+}
+
+section {
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 30px;
+}
+section:before {
+  content: '';
+  position: absolute;
+  left: -999em;
+  right: -999em;
+  top: 0px;
+  bottom: 0;
+  z-index: -1;
+}
+section:nth-child(even):before {
+  background-color: #062946;
+}
+section:nth-child(even) h1:not(.nav-brand) {
+  color: white;
+}
+section:nth-child(even) h1:not(.nav-brand):after {
+  background-color: white;
+}
+section:nth-child(even) h2 {
+  color: white;
+}
+section:nth-child(even) p, section:nth-child(even) li {
+  color: #ddd;
+}
+section:nth-child(even) a {
+  color: white;
+}
+section:nth-child(even) .show-grid [class^=col-] {
+  background-color: #ddd;
+  border: 1px solid white;
+}
+section + section {
+  margin-top: 50px;
 }
 
 html, body {
@@ -888,7 +921,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #3390f1;
+  color: #062946;
   font-family: HalisR-Regular;
   font-size: 3.5em;
   text-transform: uppercase;
@@ -896,30 +929,15 @@ h1 {
 
 h1:not(.nav-brand) {
   font-family: HalisR-Black;
-  padding: 40px 0 35px 0;
-  color: #fff;
-  text-align: center;
-  font-size: 3.5em;
+  color: #062946;
+  font-size: 3em;
   text-transform: uppercase;
-  background-color: #3390f1;
   font-weight: 500;
   line-height: 1em;
-  margin: 0 -999rem;
   margin-top: 50px;
   margin-bottom: 20px;
 }
-
-h2 {
-  color: #062946;
-  font-family: HalisR-Regular;
-  font-size: 2em;
-  padding-top: 10px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  line-height: 1em;
-}
-h2:after {
+h1:not(.nav-brand):after {
   display: block;
   position: relative;
   height: 3px;
@@ -928,8 +946,23 @@ h2:after {
   content: " ";
 }
 
+h2 {
+  color: #55C4C7;
+  font-family: HalisR-Regular;
+  font-size: 1.5em;
+  font-family: HalisR-Regular;
+  font-size: 2em;
+  padding-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 h3 {
-  color: #3390f1;
+  color: #062946;
   font-size: 24px;
   margin-top: 24px;
   margin-bottom: 10px;
@@ -937,7 +970,7 @@ h3 {
 }
 
 h4 {
-  color: #062946;
+  color: #55C4C7;
   font-family: HalisR-Regular;
   font-size: 22px;
   margin-bottom: 5px;
@@ -948,7 +981,7 @@ h4 {
   height: calc(100vh + 100px);
   position: relative;
   margin-top: -100px;
-  background-color: #3390f1;
+  background-color: #062946;
 }
 .splash + .pennapps-nav {
   position: absolute;
@@ -979,7 +1012,7 @@ h4 {
   top: 0px;
   bottom: auto;
   z-index: 1;
-  border-bottom: 1px solid #3390f1;
+  border-bottom: 1px solid #062946;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .pennapps-nav.fixed ul.nav-links > li > a {
@@ -999,7 +1032,7 @@ h4 {
 }
 .pennapps-nav .nav-expand .expand-bar {
   display: block;
-  background-color: #3390f1;
+  background-color: #062946;
   height: 2px;
   width: 22px;
 }
@@ -1029,7 +1062,7 @@ h4 {
   padding: 15px;
   position: relative;
   display: block;
-  color: #3390f1;
+  color: #062946;
   text-transform: uppercase;
   font-family: HalisR-Regular;
   font-size: 1em;
@@ -1054,7 +1087,7 @@ h4 {
   border-radius: 15px;
   position: relative;
   margin: auto;
-  background-color: #3390f1;
+  background-color: #062946;
   border: 2px solid white;
 }
 .pennapps-nav ul.nav-links > li > a .bubble:after {
@@ -1073,11 +1106,11 @@ h4 {
   top: -15px;
 }
 .pennapps-nav ul.nav-links > li > a.active .bubble:after {
-  background-color: #3390f1;
+  background-color: #062946;
 }
 .pennapps-nav ul.nav-links .nav-slider {
   height: 2px;
-  background-color: #3390f1;
+  background-color: #062946;
   width: calc(100% - 15px);
   position: absolute;
   left: 0px;
@@ -1111,7 +1144,7 @@ h4 {
   margin-top: 0px;
 }
 .pennapps-nav.collapse ul.nav-links > li > a:hover {
-  background-color: #3390f1;
+  background-color: #062946;
   color: white;
 }
 .pennapps-nav.collapse ul.nav-links > li > a .bubble {
@@ -1144,7 +1177,7 @@ table tr:nth-child(odd) {
   background-color: white;
 }
 table tr th {
-  background-color: #3390f1;
+  background-color: #062946;
   color: white;
 }
 table tr th, table tr td {
@@ -1152,15 +1185,14 @@ table tr th, table tr td {
 }
 
 footer {
-  background-color: #3390f1;
-  margin-top: 30px;
+  background-color: #062946;
   padding-top: 30px;
   padding-bottom: 30px;
   position: relative;
 }
 footer:after {
   content: "";
-  background-color: #3390f1;
+  background-color: #062946;
   position: absolute;
   display: block;
   left: -999rem;

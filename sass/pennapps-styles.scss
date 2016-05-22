@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'normalize';
+// @import 'theme';
 @import 'list';
+
 
 a, a:visited, a:hover, a:active {
     color: $primary-color;
@@ -15,32 +17,94 @@ a, a:visited, a:hover, a:active {
 
 @import 'grid';
 
-p {
-    color: #5f5f5f;
+p, li {
+    color: $dark-gray;
     font-family: "Open Sans",sans-serif;
     font-weight: 300;
     font-size: 1.1em;
     line-height: 1.6em;
-    margin: 0px;
+}
 
+p {
     & + p {
         margin-top: 10px;
     }
 }
 
-ul {
-    li {
-        color: #5f5f5f;
-        font-family: "Open Sans",sans-serif;
-        font-size: 1.1em;
-        line-height: 1.6em;
-    }
-}
+// ul {
+//     li {
+//         color: #5f5f5f;
+//         font-family: "Open Sans",sans-serif;
+//         font-size: 1.1em;
+//         line-height: 1.6em;
+//     }
+// }
 
 pre code {
     background-color: #efefef;
     display: block;
-    padding: 5px;
+    padding: 10px;
+}
+
+// html, body {
+//     @extend .default-theme;
+// }
+
+// section {
+//     &:nth-child(odd) {
+//         @extend .primary-theme;
+//     }
+
+//     &:nth-child(even) {
+//         @extend .light-theme;
+//     }
+// }
+
+section {
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 30px;
+    &:before {
+        content: '';
+        position: absolute;
+        left: -999em;
+        right: -999em;
+        top: 0px;
+        bottom: 0;
+        z-index: -1;
+    }
+    &:nth-child(even) {
+        &:before {
+            background-color: $primary-color;    
+        }
+        h1:not(.nav-brand) {
+            color: white;
+            &:after {
+                background-color: white;
+            }
+        }
+        h2 {
+            color: white;
+        }
+        p, li {
+            color: $light-gray;
+        }
+        a {
+            color: white;
+        }
+
+        .show-grid [class^=col-] {
+            background-color: $light-gray;
+            border: 1px solid white;
+        }
+    }
+    &:nth-child(odd):before {
+        
+    }
+
+    & + section {
+        margin-top: 50px;
+    }
 }
 
 @import 'titles';
